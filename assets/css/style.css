@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bright-orange : hsl(31, 77%, 52%);
+    --color-dark-cyan : hsl(184, 100%, 22%);
+    --color-very-dark-cyan : hsl(179, 100%, 13%);
+    --color-transparent-white-p : hsla(0, 0%, 100%, 0.75);
+    --color-very-light-gray-bg-head-btn : hsl(0, 0%, 95%);
+    --font-lexend-deca : 'Lexend Deca', sans-serif;
+    --font-big-shoulders-display : 'Big Shoulders Display', cursive;
+}
+
+body {
+    font-size: 15px;
+}
+
+.cover {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    max-width: 900px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card {
+  background-color: var(--bg-clr);
+  padding: 40px;
+}
+.card h2{
+  padding: 25px 0;
+  font-size: 40px;
+  color: var(--color-very-light-gray-bg-head-btn);
+  text-transform: uppercase;
+  font-family: var(--font-big-shoulders-display);
+  font-weight: 700;
+}
+.card p{
+  padding-bottom: 30px;
+  padding-right: 18px;
+  font-size: 15px;
+  color: var(--color-transparent-white-p);
+  font-family: var(--font-lexend-deca);
+  font-weight: 300;
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+
+.card .btn {
+  margin-top: 30px;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 700;
+  border: 2px solid var(--color-very-light-gray-bg-head-btn);
+  color: var(--clr);
+  cursor: pointer;
+  transition: all .5s ease;
+}
+.card .btn:hover {
+  border: 2px solid var(--color-very-light-gray-bg-head-btn);
+  color: var(--color-very-light-gray-bg-head-btn);
+  background-color: transparent;
+  transition: all .5s ease;
+}
+
+@media (max-width: 946px) {
+
+    .cover {
+        height: 100%;
+        padding: 50px 15px;
+    }
+
+    .card h2{ 
+        font-size: 32px;
+    }
+    .content {
+        flex-direction: column;
+        max-width: 300px;
+    }
+
+    .card p{ 
+        padding-bottom: 15px;
+        margin-bottom: 5px;
+        padding-right: 0px;
+    }
+    .card .btn {
+        margin-top: 5px;
+        padding: 10px 25px;
+        font-size: 13px;
+    }
+}
